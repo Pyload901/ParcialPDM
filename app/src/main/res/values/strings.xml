@@ -2,4 +2,12 @@
     <string name="app_name">TiendasTracker</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre_tienda">nombre de tienda</string>
+    <string name="direccion_tienda">direccion tienda</string>
+    <string name="action_add">Agregar</string>
+    <string name="direccion_add">Direccion</string>
+    <string name="nombre_add">Nombre</string>
+    <string name="nombre_description">Nombre:</string>
+    <string name="direccion_description">Direccion:</string>
+    <string name="title">Tiendas Tracker</string>
 </resources>

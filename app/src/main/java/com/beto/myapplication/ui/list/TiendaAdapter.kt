@@ -13,7 +13,8 @@ class TiendaAdapter(val clickListener: (tienda: TiendaModel) -> Unit): RecyclerV
     // ViewHolder
     class ViewHolder(val binding: FragmentTiendaItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(tienda: TiendaModel, clickListener: (tienda: TiendaModel) -> Unit) {
-            //TODO bind data
+            binding.nombreTiendaItemView.text = tienda.nombre
+            binding.tiendaItemCard.setOnClickListener{clickListener(tienda)}
         }
     }
 
@@ -29,5 +30,10 @@ class TiendaAdapter(val clickListener: (tienda: TiendaModel) -> Unit): RecyclerV
         val inflater = LayoutInflater.from(parent.context)
         val view = FragmentTiendaItemBinding.inflate(inflater)
         return ViewHolder(view)
+    }
+    fun setData(_tiendas: List<TiendaModel>) {
+        tiendas.clear()
+        tiendas.addAll(_tiendas)
+        notifyDataSetChanged()
     }
 }

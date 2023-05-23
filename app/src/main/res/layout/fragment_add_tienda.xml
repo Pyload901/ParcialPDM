@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.add.AddTiendaFragment">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.beto.myapplication.ui.viewmodel.TiendaViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:text="@={viewModel.nombre}"
+            android:textSize="@dimen/normal_text"
+            android:id="@+id/nombre_tienda_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_pad"
+            android:layout_marginBottom="@dimen/small_pad"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/nombre_add"
+            app:layout_constraintBottom_toTopOf="@+id/direccion_tienda_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <EditText
+            android:text="@={viewModel.direccion}"
+            android:textSize="@dimen/normal_text"
+            android:id="@+id/direccion_tienda_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_pad"
+            android:layout_marginBottom="@dimen/small_pad"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/direccion_add"
+            app:layout_constraintBottom_toTopOf="@+id/action_add_tienda"
+            app:layout_constraintEnd_toEndOf="@+id/nombre_tienda_input"
+            app:layout_constraintStart_toStartOf="@+id/nombre_tienda_input"
+            app:layout_constraintTop_toBottomOf="@+id/nombre_tienda_input" />
+
+        <Button
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/normal_text"
+            android:backgroundTint="@color/primary_color"
+            android:id="@+id/action_add_tienda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_pad"
+            android:layout_marginBottom="@dimen/small_pad"
+            android:text="@string/action_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/direccion_tienda_input"
+            app:layout_constraintStart_toStartOf="@+id/direccion_tienda_input"
+            app:layout_constraintTop_toBottomOf="@+id/direccion_tienda_input" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

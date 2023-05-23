@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listTiendasFragment">
+
+    <fragment
+        android:id="@+id/addTiendaFragment"
+        android:name="com.beto.myapplication.ui.add.AddTiendaFragment"
+        android:label="fragment_add_tienda"
+        tools:layout="@layout/fragment_add_tienda" />
+    <fragment
+        android:id="@+id/listTiendasFragment"
+        android:name="com.beto.myapplication.ui.list.ListTiendasFragment"
+        android:label="fragment_list_tiendas"
+        tools:layout="@layout/fragment_list_tiendas" >
+        <action
+            android:id="@+id/action_listTiendasFragment_to_descriptionTiendaFragment"
+            app:destination="@id/descriptionTiendaFragment" />
+        <action
+            android:id="@+id/action_listTiendasFragment_to_addTiendaFragment"
+            app:destination="@id/addTiendaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionTiendaFragment"
+        android:name="com.beto.myapplication.ui.description.DescriptionTiendaFragment"
+        android:label="fragment_description_tienda"
+        tools:layout="@layout/fragment_description_tienda" />
+</navigation>
